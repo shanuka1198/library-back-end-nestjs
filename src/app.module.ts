@@ -5,6 +5,7 @@ import { BooksModule } from './books/books.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
+import { BarrowModule } from './barrow/barrow.module';
 import * as process from 'node:process';
 
 @Module({
@@ -16,6 +17,7 @@ import * as process from 'node:process';
     BooksModule,
     MongooseModule.forRoot(process.env.DB_URL),
     AuthModule,
+    BarrowModule,
   ],
   controllers: [AppController],
   providers: [AppService],
