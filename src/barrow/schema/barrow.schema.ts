@@ -1,6 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { Book } from '../../books/schema/book.schema';
 
 export type BarrowDocument = Barrows & Document;
 
@@ -29,5 +28,9 @@ export class Barrows {
 
   @Prop({ required: true })
   address: string;
+  @Prop({ required: true })
+  startDate: Date;
+  @Prop({ required: true })
+  endDate: Date;
 }
 export const BarrowSchema = SchemaFactory.createForClass(Barrows);

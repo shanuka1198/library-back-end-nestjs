@@ -1,4 +1,5 @@
-import { IsString, IsNotEmpty, IsEmail } from 'class-validator';
+import { IsString, IsNotEmpty, IsEmail, IsDate } from 'class-validator';
+import { Type } from 'class-transformer';
 
 export class CreateBarrowDto {
   @IsEmail()
@@ -15,4 +16,14 @@ export class CreateBarrowDto {
   @IsString()
   @IsNotEmpty()
   address: string;
+
+  @IsDate()
+  @IsNotEmpty()
+  @Type(() => Date)
+  startDate: Date;
+
+  @IsDate()
+  @IsNotEmpty()
+  @Type(() => Date)
+  endDate: Date;
 }
