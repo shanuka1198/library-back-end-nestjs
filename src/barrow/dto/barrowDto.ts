@@ -26,4 +26,5 @@ export class CreateBarrowDto {
   @IsNotEmpty()
   @Type(() => Date)
   endDate: Date;
+
 }

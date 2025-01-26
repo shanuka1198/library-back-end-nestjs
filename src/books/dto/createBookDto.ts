@@ -1,5 +1,14 @@
 import { Category } from '../schema/book.schema';
-import { IsEmpty, IsEnum, IsNotEmpty, IsString, Min } from 'class-validator';
+import {
+  IsEmpty,
+  IsEnum,
+  IsInt,
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  Max,
+  Min,
+} from 'class-validator';
 import { User } from '../../auth/schema/user.schema';
 
 export class CreateBookDto {
@@ -21,4 +30,6 @@ export class CreateBookDto {
   category: Category;
   @IsEmpty({ message: 'you can not pass user id' })
   user: User;
+  @IsNotEmpty()
+  quantity: number;
 }

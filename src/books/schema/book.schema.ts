@@ -33,6 +33,9 @@ export class Book {
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
   user: User;
+
+  @Prop({ required: true })
+  quantity: number;
 }
 
 export const BookSchema = SchemaFactory.createForClass(Book);

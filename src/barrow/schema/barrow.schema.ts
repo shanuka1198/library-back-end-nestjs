@@ -5,7 +5,7 @@ export type BarrowDocument = Barrows & Document;
 
 @Schema()
 export class Barrows {
-  @Prop({ unique: true, required: true })
+  @Prop({ required: true })
   bookId: string;
 
   @Prop({ required: true })
@@ -32,5 +32,7 @@ export class Barrows {
   startDate: Date;
   @Prop({ required: true })
   endDate: Date;
+  @Prop({ required: true })
+  count: number;
 }
 export const BarrowSchema = SchemaFactory.createForClass(Barrows);

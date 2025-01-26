@@ -20,6 +20,8 @@ export class UpdateBookDto {
   @IsString()
   @IsEnum(Category)
   category: Category;
-  // @IsEmpty({ message: 'you can not pass user id' })
-  // readonly user: User;
+  @IsEmpty({ message: 'you can not pass user id' })
+  user: User;
+  @IsNotEmpty()
+  quantity: number;
 }
