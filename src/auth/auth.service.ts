@@ -72,4 +72,8 @@ export class AuthService {
 
     return { token };
   }
+
+  async getAlUser(): Promise<User[]> {
+    return this.userModel.find();
+  }
 }

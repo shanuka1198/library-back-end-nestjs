@@ -17,7 +17,7 @@ export class Barrows {
   @Prop({ required: true })
   author: string;
 
-  @Prop({ unique: true, required: true })
+  @Prop({ required: true })
   email: string;
 
   @Prop({ required: true })
@@ -28,10 +28,13 @@ export class Barrows {
 
   @Prop({ required: true })
   address: string;
+
   @Prop({ required: true })
   startDate: Date;
+
   @Prop({ required: true })
   endDate: Date;
+
   @Prop({ required: true })
   count: number;
 }
